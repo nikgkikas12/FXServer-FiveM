@@ -8,16 +8,8 @@ tasks:
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     ref: master
-    subpath: resources/[cfx-deafult]
-    dest: ./resources
-
-  ## screenshot-basic
-  - action: download_file
-    url: https://github.com/project-error/screenshot-basic/releases/download/1.0.1/screenshot-basic.zip
-    path: ./tmp/screenshot-basic.zip
-  - action: unzip
-    src: ./tmp/screenshot-basic.zip
-    dest: ./resources/[cfx-deafult]/screenshot-basic
+    subpath: resources
+    dest: ./resources/[cfx-default]
 
     # Download server.cfg
   - action: download_github
@@ -28,3 +20,6 @@ tasks:
   - action: move_path
     src: ./tmp/fx/server.cfg
     dest: ./server.cfg
+
+ - action: remove_path
+    path: ./tmp
