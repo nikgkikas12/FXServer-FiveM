@@ -19,7 +19,11 @@ tasks:
     src: ./tmp/screenshot-basic.zip
     dest: ./resources/[cfx-deafult]/screenshot-basic
 
-  # Download default server.cfg for FiveM
-  - action: download_file
-    url: https://raw.githubusercontent.com/tabarra/CFX-Default-recipe/main/server.cfg
-    path: ./server.cfg
+  # Download default server.cfg
+  - action: download_github
+    src: https://github.com/nikgkikas12/FXServer-FiveM
+    dest: ./tmp/fxserver
+
+   - action: move_path
+    src: ./tmp/zap_esx/server.cfg
+    dest: ./server.cfg
