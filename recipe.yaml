@@ -1,0 +1,25 @@
+$engine: 3
+$onesync: on
+name: FXServer CFX Default FiveM
+description: Recipe for the base resources required to run a minimal FXServer FiveM server.
+
+tasks: 
+  # Download default CFX resources
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    ref: master
+    subpath: resources/[cfx-deafult]
+    dest: ./resources
+
+  ## screenshot-basic
+  - action: download_file
+    url: https://github.com/project-error/screenshot-basic/releases/download/1.0.1/screenshot-basic.zip
+    path: ./tmp/screenshot-basic.zip
+  - action: unzip
+    src: ./tmp/screenshot-basic.zip
+    dest: ./resources/[cfx-deafult]/screenshot-basic
+
+  # Download default server.cfg for FiveM
+  - action: download_file
+    url: https://raw.githubusercontent.com/tabarra/CFX-Default-recipe/main/server.cfg
+    path: ./server.cfg
