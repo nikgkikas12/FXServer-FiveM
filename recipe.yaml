@@ -19,11 +19,12 @@ tasks:
     src: ./tmp/screenshot-basic.zip
     dest: ./resources/[cfx-deafult]/screenshot-basic
 
-  # Download default server.cfg
+    # Download server.cfg
   - action: download_github
     src: https://github.com/nikgkikas12/FXServer-FiveM
-    dest: ./tmp/fxserver
+    ref: main
+    dest: ./tmp/fx
 
-   - action: move_path
-    src: ./tmp/fxserver/server.cfg
+  - action: move_path
+    src: ./tmp/fx/server.cfg
     dest: ./server.cfg
