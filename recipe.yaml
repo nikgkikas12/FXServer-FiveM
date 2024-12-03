@@ -1,6 +1,7 @@
 $engine: 3
 $onesync: on
 name: FXServer CFX Default FiveM
+author: nikos21_2
 description: Recipe for the base resources required to run a minimal FXServer FiveM server.
 
 tasks: 
