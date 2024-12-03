@@ -25,5 +25,5 @@ tasks:
     dest: ./tmp/fxserver
 
    - action: move_path
-    src: ./tmp/zap_esx/server.cfg
+    src: ./tmp/fxserver/server.cfg
     dest: ./server.cfg
