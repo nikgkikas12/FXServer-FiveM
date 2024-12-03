@@ -9,7 +9,7 @@ tasks:
     src: https://github.com/citizenfx/cfx-server-data
     ref: master
     subpath: resources
-    dest: ./resources/[cfx-default]
+    dest: ./resources
 
     # Download server.cfg
   - action: download_github
